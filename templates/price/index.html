@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Price</title>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <h1><b><i><center>Price</center></i></b></h1>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="jumbotron">
+        <form method="get">
+        {{ form.as_p }}
+        <input type="submit" value="Calculate" />
+        </form>
+      </div>
+    </div>
+
+    {% if pr %}
+      <div class="container">
+        <div class="jumbotron">
+          <h2><b><i>It costs: {{pr}} $</i></b></h2>
+        </div>
+      </div>
+    {% endif %}
+    
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  </body>
+</html>
