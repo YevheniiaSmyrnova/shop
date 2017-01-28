@@ -60,4 +60,3 @@ def price(request):
         form = PriceForm()
     result['form'] = form
     return render(request, 'price/index.html', result)
-
