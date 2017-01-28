@@ -1,0 +1,10 @@
+# python precompiled files:
+*.py~
+*.pyc
+*.pyo
+*.log
+db.sqlite3
+shop/local_settings.py
+.idea
+staticfiles
+.env
